@@ -513,12 +513,6 @@ class SlaaneshCostumeCustomizer:
     FUNCTION = "process_costume"
     CATEGORY = "slaaneshcontroller/character"
 
-    @classmethod
-    def IS_CHANGED(s, **kwargs):
-        if kwargs.get("总开关") and kwargs.get("模式选择") != "🔒 手动指定":
-            return int(kwargs.get("seed", 0))
-        return False
-
     def process_costume(self, **kwargs):
         
         def parse_layered_string(text, mode_str):

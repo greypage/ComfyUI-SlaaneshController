@@ -1141,12 +1141,6 @@ class SlaaneshSoloSexControl:
     FUNCTION = "generate" 
     CATEGORY = "slaaneshcontroller/sex"
 
-    @classmethod
-    def IS_CHANGED(s, **kwargs):
-        if kwargs.get("总开关") and kwargs.get("模式选择") != "🔒 手动指定":
-            return int(kwargs.get("seed", 0))
-        return False
-    
 # ==============================================================================
     # 核心生成逻辑函数 (修复版)
     # ==============================================================================

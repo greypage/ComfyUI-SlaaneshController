@@ -150,12 +150,6 @@ class SlaaneshAccessoryCustomizer:
     FUNCTION = "process_accessory"
     CATEGORY = "slaaneshcontroller/character"
 
-    @classmethod
-    def IS_CHANGED(s, **kwargs):
-        if kwargs.get("总开关") and kwargs.get("模式选择") != "🔒 手动指定":
-            return int(kwargs.get("seed", 0))
-        return False
-
     def process_accessory(self, **kwargs):
         # [修改] 返回值增加空占位
         if not kwargs.get("总开关", False): return ("", "", "", "")

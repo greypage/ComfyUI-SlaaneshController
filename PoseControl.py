@@ -362,12 +362,6 @@ class SlaaneshPoseControl:
     FUNCTION = "slaaneshpose"
     CATEGORY = "slaaneshcontroller/pose"
 
-    @classmethod
-    def IS_CHANGED(s, **kwargs):
-        if kwargs.get("总开关") and kwargs.get("模式选择") != "🔒 手动指定":
-            return int(kwargs.get("seed", 0))
-        return False
-
     def slaaneshpose(self, **kwargs):
         if not kwargs.get("总开关", False): return ("", "", "") 
 

@@ -163,13 +163,6 @@ class SlaaneshSceneControl:
     FUNCTION = "slaanesh_scene"
     CATEGORY = "slaaneshcontroller/scene"
 
-    @classmethod
-    def IS_CHANGED(s, **kwargs):
-        # 如果不是手动模式，每次都认为是变化的，触发随机
-        if kwargs.get("总开关") and kwargs.get("模式选择") != "🔒 手动指定":
-            return int(kwargs.get("seed", 0))
-        return False
-
     def slaanesh_scene(self, **kwargs):
         if not kwargs.get("总开关", False):
             return ("", "")

@@ -127,13 +127,6 @@ class SlaaneshMaleCharacterCustomizer:
     FUNCTION = "generate_prompt"
     CATEGORY = "slaaneshcontroller/character"
 
-    @classmethod
-    def IS_CHANGED(cls, **kwargs):
-        # 只要不是纯手动模式，就强制刷新
-        if kwargs.get("总开关") and kwargs.get("模式选择") != "🔒 手动指定":
-            return int(kwargs.get("seed", 0))
-        return False
-
     def generate_prompt(self, **kwargs):
         if not kwargs.get("总开关"):
             return ("", "")
