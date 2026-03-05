@@ -10,6 +10,10 @@ from .SceneControl import SlaaneshSceneControl # 色孽の地点场景控制
 from .BodyCustomizer import SlaaneshBodyCustomizer # 色孽の地点场景控制
 from .CostumeCustomizer import SlaaneshCostumeCustomizer # 
 from .AccessoryCustomizer import SlaaneshAccessoryCustomizer # 
+from .promptcard.PromptCardCostume import SlaaneshPromptCardCostume
+from .promptcard.PromptCardFraming import SlaaneshPromptCardFraming
+from .promptcard.PromptCardR18Scene import SlaaneshPromptCardR18Scene
+from .promptcard.PromptCardScene import SlaaneshPromptCardScene
 
 
 NODE_CLASS_MAPPINGS = {
@@ -20,7 +24,11 @@ NODE_CLASS_MAPPINGS = {
     "SlaaneshSceneControl": SlaaneshSceneControl, # 地点场景控制
     "SlaaneshBodyCustomizer": SlaaneshBodyCustomizer, # 地点场景控制
     "SlaaneshCostumeCustomizer": SlaaneshCostumeCustomizer,
-    "SlaaneshAccessoryCustomizer": SlaaneshAccessoryCustomizer
+    "SlaaneshAccessoryCustomizer": SlaaneshAccessoryCustomizer,
+    "SlaaneshPromptCardCostume": SlaaneshPromptCardCostume,
+    "SlaaneshPromptCardFraming": SlaaneshPromptCardFraming,
+    "SlaaneshPromptCardR18Scene": SlaaneshPromptCardR18Scene,
+    "SlaaneshPromptCardScene": SlaaneshPromptCardScene
 
 }
 
@@ -32,7 +40,11 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "SlaaneshSceneControl": "色孽の地点场景控制", 
     "SlaaneshBodyCustomizer": "色孽の女角色外观定制器",
     "SlaaneshCostumeCustomizer": "色孽の女角色服装定制器",
-    "SlaaneshAccessoryCustomizer": "色孽の女角色饰品定制器"
+    "SlaaneshAccessoryCustomizer": "色孽の女角色饰品定制器",
+    "SlaaneshPromptCardCostume": "灵のPrompt抽卡-服装",
+    "SlaaneshPromptCardFraming": "灵のPrompt抽卡-构图",
+    "SlaaneshPromptCardR18Scene": "灵のPrompt抽卡-R18情景",
+    "SlaaneshPromptCardScene": "灵のPrompt抽卡-场景"
 
 }
 
